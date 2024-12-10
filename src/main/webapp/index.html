@@ -3,159 +3,124 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zomato Clone</title>
-  <!-- <link rel="stylesheet" href="style.css"> -->
-
+  <title>Study Login Page</title>
+  <link rel="stylesheet" href="">
   <style>
-  /* General Reset */
-  body, h1, h2, h3, p, ul, li, a {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    line-height: 1.6;
-  }
-  
-  header {
-    background: #ff4d4d;
-    color: #fff;
-    padding: 1rem 0;
-  }
-  
-  .container {
-    width: 90%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  nav ul {
-    display: flex;
-  }
-  
-  nav ul li {
-    margin: 0 10px;
-  }
-  
-  nav ul li a {
-    color: white;
-    font-size: 1.1rem;
-  }
-  
-  .banner {
-    text-align: center;
-    padding: 3rem 0;
-    background: #ffe6e6;
-  }
-  
-  .banner h2 {
-    margin-bottom: 1rem;
-  }
-  
-  form input {
-    padding: 0.5rem;
-    width: 300px;
-    margin-right: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  form button {
-    padding: 0.5rem 1rem;
-    background: #ff4d4d;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  #restaurants {
-    padding: 2rem;
-  }
-  
-  .restaurant-list {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .restaurant-card {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-    text-align: center;
-    width: 200px;
-  }
-  
-  .restaurant-card img {
-    width: 100%;
-    height: 150px;
-  }
-  
-  footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
-  }
-  
+    /* General Reset */
+body, h1, h2, p, input, button, a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
-</style>
+body {
+  background: linear-gradient(to bottom, #84a9ff, #a5d8ff);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px;
+}
+
+.login-box {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+}
+
+.login-box h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.login-box p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #84a9ff;
+}
+
+.btn {
+  background: #4c7cff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #3b62cc;
+}
+
+.forgot-password {
+  margin-top: 15px;
+}
+
+.forgot-password a {
+  font-size: 12px;
+  color: #4c7cff;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+  </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Zomato</h1>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#restaurants">Restaurants</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <section id="home">
-    <div class="banner">
-      <h2>Discover the best food & drinks</h2>
+  <div class="login-container">
+    <div class="login-box">
+      <h2>Study Portal</h2>
+      <p>Login to access your study resources</p>
       <form>
-        <input type="text" placeholder="Search for restaurants, dishes...">
-        <button type="submit">Search</button>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" required>
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <p class="forgot-password"><a href="#">Forgot Password?</a></p>
       </form>
     </div>
-  </section>
-
-  <section id="restaurants">
-    <h2>Popular Restaurants</h2>
-    <div class="restaurant-list">
-      <div class="restaurant-card">
-        <img src="download (3).jpg" alt="Restaurant 1">
-        <h3>Restaurant 1</h3>
-        <p>Cuisine: Italian</p>
-      </div>
-      <div class="restaurant-card">
-        <img src="indiam.jpg" alt="Restaurant 2">
-        <h3>Restaurant 2</h3>
-        <p>Cuisine: Indian</p>
-      </div>
-      <div class="restaurant-card">
-        <img src="Pictures/download.jpg" alt="Restaurant 3">
-        <h3>Restaurant 3</h3>
-        <p>Cuisine: Chinese</p>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2024 Zomato Clone. All rights reserved.</p>
-  </footer>
+  </div>
 </body>
 </html>
